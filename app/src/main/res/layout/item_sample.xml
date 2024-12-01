@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="info"
+            type="com.example.testinterview.views.view_sample.models.ResponseSample" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_4"
+        android:layout_marginTop="@dimen/spacing_2"
+        android:layout_marginEnd="@dimen/spacing_4"
+        android:layout_marginBottom="@dimen/spacing_2"
+        android:background="@drawable/background_rounded_corners"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{String.valueOf(info.index)}"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{info.title}"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:ellipsize="end"
+            android:text="@{info.date}"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="@dimen/font_12"
+            android:visibility="visible" />
+    </LinearLayout>
+</layout>
